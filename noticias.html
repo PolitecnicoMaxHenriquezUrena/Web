@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Politécnico - Noticias</title>
+    <style>
+        body::-webkit-scrollbar{
+            width: 10px;
+        }
+        body::-webkit-scrollbar-thumb{
+            background-color: #ccc;
+            border-radius: 10px;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: -15px;
+            padding-left: 5%;
+            padding-right: 5%;
+            font-size: 20px;
+            position: fixed;
+            top: 0;
+        }
+        nav{
+            background-color: white;
+            width: 1229px;
+            top: 0;
+            left: 0px;
+            box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
+            z-index: 2;
+        }
+        ul li{
+            display: inline-block;
+            padding: 0px 20px;
+         }
+        a:hover{
+            text-decoration: none;
+            color: #007bff;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+            transition: color 0.3s;
+            font-family: sans-serif;
+            font-size: 18px;
+        }
+        .inicio::after{
+            content: '';
+            position: absolute;
+            right: 41.9%;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            bottom: 12px;
+            width: 0px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .inicio:hover::after{
+            width: 60px;
+        }
+        .noticias::after {
+            content: '';
+            position: absolute;
+            right: 26.4%;
+            transform: translateX(50%);
+            bottom: 12px;
+            width: 80px;
+            height: 2px;
+            background-color: #007bff;
+            transition: width 0.3s ease-in-out;
+        }
+        .noticias:hover::after {
+            width: 80px;
+        }
+        .modulos:after{
+            content: '';
+            position: absolute;
+            right: 34.6%;
+            bottom: 12px;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            width: 0px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .modulos:hover::after{
+            width: 80px;
+        }
+        .eventos:after{
+            content: '';
+            position: absolute;
+            right: 18.4%;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            bottom: 12px;
+            width: 0px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .eventos:hover::after{
+            width: 80px;
+        }
+        .inscripcion:after{
+            content: '';
+            position: absolute;
+            right: 9.6%;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            bottom: 12px;
+            width: 0px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .inscripcion:hover::after{
+            width: 100px;
+        }
+        .menu{
+            background-color: white;
+            position: fixed;
+            width: 300px;
+            height: 560px;
+            top: 70px;
+            left: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, .35);
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        iframe{
+            position: absolute;
+            width: 290px;
+            height: 290px;
+            top: 5px;
+            left: 5px;
+        }
+        .info{
+            background-color: none;
+            position: absolute;
+            width: 290px;
+            height: 255px;
+            left: 5px;
+            bottom: 5px;
+        }
+        .redes-sociales{
+            background-color: none;
+            width: 1470px;
+            height: 50px;
+            position: fixed;
+            bottom: 20px;
+            left: -135px;
+            box-sizing: border-box;
+        }
+        .redes{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+        }
+        i{
+            text-align: center;
+            font-size: 15x;
+            margin: 20px;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, .35);
+            transition: color 2s;
+        }
+        #facebook:hover{
+            color: blue;
+            box-shadow: 0px 0px 15px blue,
+                        0px 0px 35px blue;
+            transition: box-shadow 0.3s;
+
+        }
+        #instagram:hover{
+            color: #FF3300;
+            box-shadow: 0px 0px 15px #FF3300,
+                        0px 0px 35px #FF3300;
+            transition: box-shadow 0.3s;
+        }
+        .cuerpo{
+            background-color: none;
+            position: absolute;
+            width: 950px;
+            height: 2400px;
+            top: 70px;
+            left: 375px;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+        .news-one{
+            position: absolute;
+            background-color: white;
+            width: 940px;
+            height: 545px;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, .35);
+        }
+        .text-news-one{
+            position: absolute;
+            width: 550px;
+            height: 505px;
+            top: 20px;
+            right: 20px;
+            background-color: none;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .news-two{
+            position: absolute;
+            background-color: white;
+            width: 940px;
+            height: 545px;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, .35);
+            top: 600px;
+        }
+        .text-news-two{
+            background-color: none;
+            position: absolute;
+            width: 580px;
+            height: 505px;
+            left: 20px;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        .text-two-news-two{
+            position: absolute;
+            background-color: none;
+            width: 300px;
+            height: 250px;
+            bottom: 20px;
+            right: 20px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .news-three{
+            position: absolute;
+            background-color: white;
+            width: 940px;
+            height: 545px;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, .35);
+            top: 1200px;
+        }
+        .text-new-three{
+            position: absolute;
+            width: 550px;
+            height: 505px;
+            top: 20px;
+            right: 20px;
+            background-color: none;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .news-four{
+            position: absolute;
+            background-color: white;
+            width: 940px;
+            height: 545px;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, .35);
+            top: 1800px;
+        }
+        .text-one-news-four{
+            background-color: none;
+            position: absolute;
+            width: 280px;
+            height: 515px;
+            left: 330px;
+            top: 10px;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+        .text-two-news-four{
+            background-color: none;
+            position: absolute;
+            width: 300px;
+            height: 250px;
+            right: 20px;
+            bottom: 20px;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="file:///C:/Users/Admin/Desktop/Web%20final/index.html"><img class="logo" src="SubLogo.jpg" style="width: 150px;"></a>
+                <ul>
+                    <li><a class="inicio" href="index.html" title="Inicio">Inicio</a></li>
+                    <li><a class="modulos" href="modulos.html">Módulos</a></li>
+                    <li><a style="color: #007bff" class="noticias" href="noticias.html">Noticias</a></li>
+                    <li><a class="eventos" href="eventos.html">Eventos</a></li>
+                    <li><a class="inscripcion" href="inscripciones.html">Inscripción</a></li>
+                </ul>
+        </nav>
+    </header>
+
+
+    <div class="cuerpo">
+        <div class="news-one">
+            <img src="News-one. Img-one.png" style="width: 300px; height: 240px;"><img src="News-one. Img-two.png" style="position: absolute; width: 300px; height: 240px; left: 5px; top: 270px; margin: 15px;">
+            <div class="text-news-one">
+                <h2 style="text-align: center;">Celebración de la idependencia Dominicana</h2>
+                <p style="font-size: 19px;">El 26 de febrero del año en curso en nuestra institución estuvimos celebrando con orgullo nuestra patria. En esta celebración conmemorando nuestra patria, hubo actuaciones sobre el juramento trinitario, nuestro orgulloso Baton Ballet y por supuesto nuestra marcha magistral, entre otras más actividades.Nuestros estudiantes dieron una magnifica actuación en conmemoración de la independencia de nuestro país. Además de su gran ac participación, imitaron a la perfección el trabucazo dado por Matías Ramón Mella. <br><br> La Independencia Nacional constituye la garantía de las libertades patrias y de nuestra existencia como Nación libre e independiente de toda dominación, protectorado, intervención e influencia extranjera, así como la concibieron los Fundadores de La Trinitaria el 16 de julio de 1838, quienes con el lema: Dios, Patria y Libertad, República Dominicana, dejaron proclamada nuestra nación el 27 de febrero de 1844, siendo así entendida por todos los pueblos.</p>
+            </div>
+        </div>
+
+        <div class="news-two">
+            <img src="News-two. Img-one.png" style="position: absolute; width: 300px; height: 240px; right: 20px;">
+            <div class="text-news-two"><h2 style="text-align: center;">Salud en el ambiente escolar</h2>
+            <p style="font-size: 19px;">La salud en las escuelas y otras instituciones educativas es un aspecto fundamental que influye directamente en el bienestar y el rendimiento de los estudiantes. Desde la higiene del entorno hasta la promoción de estilos de vida saludables, estas instituciones desempeñan un papel crucial en la protección y el fomento de la salud de sus miembros. <br><br>Es importante que las escuelas proporcionen un entorno limpio y seguro para sus estudiantes, con instalaciones adecuadas de saneamiento y medidas efectivas de control de enfermedades. Además, promover una alimentación balanceada, la práctica regular de ejercicio físico y la atención a la salud mental son aspectos esenciales para garantizar un desarrollo integral de los estudiantes. <br><br>Las escuelas también deben implementar programas educativos que fomenten hábitos saludables desde temprana edad, tales como la importancia del consumo de frutas y verduras, el control del tiempo frente a las pantallas, y el conocimiento sobre los efectos del alcohol y las drogas.  </p>
+            </div>
+            <div class="text-two-news-two">
+                <p style="font-size: 19px;">Las escuelas deben promover hábitos saludables como el consumo de frutas y verduras, controlar el tiempo frente a pantallas y educar sobre alcohol y drogas, así como brindar información sobre la importancia del ejercicio físico y la salud mental.</p>
+            </div>
+        </div>
+
+        <div class="news-three">
+            <img src="News-three. Img-one.png" style="width: 300px; height: 240px;"><img src="News-three. Img-two.png" style="position: absolute; width: 300px; height: 240px; left: 5px; top: 270px; margin: 15px;">
+            <div class="text-new-three">
+                <h2 style="text-align: center;">Transporte escolar</h2>
+                <p style="font-size: 19px;">TRAE es el Sistema de Transporte Estudiantil del Ministerio de Educación. Es un transporte escolar diseñado e implementado por el presidente Luis Abinader, para garantizar la llegada y salida de los centros educativos de los estudiantes dominicanos sea segura, cómoda y gratuita. <br><br> TRAE fue creado mediante el Decreto 616-22, el 23 de octubre de 2022, que declara de interés nacional su implementación, para garantizar desplazamiento gratuito de niños/as desde y hacia las escuelas, en autobuses cómodos, seguros y eficientes, para proteger la integridad de los estudiantes y disminuir el ausentismo estudiantil a clase.  <br><br> Los autobuses TRAE pasan por las paradas ya identificadas, cada 10 o 5 minutos y agotan tres turnos al día. Los recorridos inician en un primer turno de 6:00 a 8:00 de la mañana. Un segundo turno de 12:00 a 2:00 de la tarde y un último turno de 4:00 a 5:00 de la tarde.</p>
+            </div>
+        </div>
+
+        <div class="news-four">
+            <img src="News-four. img one.png" style="width: 300px; height: 240px;"><img src="News-four. img two.png" style="position: absolute; width: 300px; height: 240px; left: 5px; top: 270px; margin: 15px;"><img src="News-four. img three.png" style="position: absolute; width: 300px; height: 240px; right: 5px; top: 5px; margin: 15px;">
+            <div class="text-one-news-four">
+                <h2 style="text-align: center;">Deportes</h2>
+                <p style="font-size: 19px;">Hasta la fecha, se ha reflejado una serie de novedades significativas en el ámbito deportivo, reflejando su compromiso con el desarrollo integral de sus estudiantes. Estas novedades incluyen mejoras en las instalaciones deportivas, ampliación de los programas de entrenamiento y la introducción de nuevas disciplinas deportivas que fomentan la diversidad y el interés de los estudiantes. <br><br> El Politécnico se enorgullece de seguir innovando y mejorando en el ámbito deportivo, brindando a sus estudiantes oportunidades excepcionales para crecer, aprender y prosperar en todos los aspectos de sus vidas. </p>
+            </div>
+            <div class="text-two-news-four">
+                <p style="font-size: 19px;">Los estudiantes no solo tienen la oportunidad de destacarse en sus disciplinas deportivas, sino que también desarrollan habilidades de trabajo en equipo, liderazgo y resiliencia, que son esenciales para su futuro éxito personal y profesional.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="menu">
+        <div class="maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d945.7705112405639!2d-70.0525601!3d18.5251942!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaff4d4e3564bd5%3A0xeb91b90a009358f6!2sInstituto%20Polit%C3%A9cnico%20Max%20Henr%C3%ADquez%20Ure%C3%B1a!5e0!3m2!1ses-419!2sdo!4v1713625473876!5m2!1ses-419!2sdo" width="600" height="450" style="border:0;" allowfullscreen="false" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="info">
+            <h3 style="text-align: center;">Información</h3>
+            <p style="margin-left: 10px;"><strong>Teléfono:</strong> (809) 473-0601</p>
+            <p style="margin-left: 10px;"><strong>Ubicación:</strong> Nos localizamos en los Alcarrizos, Barrio la Unión, Calle Hato Nuevo.</p>
+            <h3 style="text-align: center;">Redes Sociales</h3>
+        </div>
+    </div>
+
+ <div class="redes-sociales">
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=100079913975583"><i style="color: blue" id="facebook" class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/politecnicomaxhenriquezurena/"><i style="color: #FF3300" id="instagram" class="fa-brands fa-instagram"></i></a>  
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Politécnico - Eventos</title>
+    <style>
+        body::-webkit-scrollbar{
+            width: 10px;
+        }
+        body::-webkit-scrollbar-thumb{
+            background-color: #ccc;
+            border-radius: 10px;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: -15px;
+            padding-left: 5%;
+            padding-right: 5%;
+            font-size: 20px;
+            position: fixed;
+            top: 0;
+        }
+        nav{
+            background-color: white;
+            width: 1229px;
+            top: 0;
+            left: 0px;
+            box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
+            z-index: 2;
+        }
+        ul li{
+            display: inline-block;
+            padding: 0px 20px;
+         }
+        a:hover{
+            text-decoration: none;
+            color: #007bff;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+            transition: color 0.3s;
+            font-family: sans-serif;
+            font-size: 18px;
+        }
+        .inicio::after{
+            content: '';
+            position: absolute;
+            right: 41.9%;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            bottom: 12px;
+            width: 0px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .inicio:hover::after{
+            width: 60px;
+        }
+        .noticias::after {
+            content: '';
+            position: absolute;
+            right: 26.4%;
+            transform: translateX(50%);
+            bottom: 12px;
+            width: 0;
+            height: 2px;
+            background-color: #007bff;
+            transition: width 0.3s ease-in-out;
+        }
+        .noticias:hover::after {
+            width: 80px;
+        }
+        .modulos:after{
+            content: '';
+            position: absolute;
+            right: 34.6%;
+            bottom: 12px;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            width: 0px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .modulos:hover::after{
+            width: 80px;
+        }
+        .eventos:after{
+            content: '';
+            position: absolute;
+            right: 18.4%;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            bottom: 12px;
+            width: 80px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .eventos:hover::after{
+            width: 80px;
+        }
+        .inscripcion:after{
+            content: '';
+            position: absolute;
+            right: 9.6%;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            bottom: 12px;
+            width: 0px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .inscripcion:hover::after{
+            width: 100px;
+        }
+        .cuerpo{
+            background-color: none;
+            position: absolute;
+            width: 1200px;
+            height: 600px;
+            top: 80px;
+            left: 80px;
+            box-sizing: border-box;
+        }
+        .event-one{
+            position: absolute;
+            margin: 5px 5px 5px 5px;
+            background-color: white;
+            width: 1190px;
+            height: 550px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, .35);
+            border-radius: 10px;
+            box-sizing: border-box
+        }
+        .events-one-video{
+            position: absolute;
+            background-color: none;
+            width: 500px;
+            height: 540px;
+            margin: 5px 5px 5px 5px;
+            overflow: scroll;
+            right: 0px
+        }
+        .events-one-info{
+            position: absolute;
+            box-sizing: border-box;
+            background-color: none;
+            width: 650px;
+            height: 540px;
+            margin: 5px 5px 5px 5px;
+            left: 0px;
+            padding: 20px;
+        }
+        .events-one-video::-webkit-scrollbar{
+            width: 7px;
+        }
+        .events-one-video::-webkit-scrollbar-thumb{
+            background-color: #ccc;
+            border-radius: 10px;
+        }
+        video{
+            border: solid 1px black;
+            border-radius: 20px;
+        }
+        .redes-sociales{
+            background-color: none;
+            width: 1470px;
+            height: 50px;
+            position: absolute;
+            bottom: -80px;
+            left: -140px;
+            box-sizing: border-box;
+        }
+        .redes{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+        }
+        .sub-redes{
+            background-color: none;
+            position: absolute;
+            width: 800px;
+            left: 430px;
+            bottom: -10px;
+            color: grey;
+        }
+        i{
+            text-align: center;
+            font-size: 15x;
+            margin: 20px;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, .35);
+            transition: color 2s;
+        }
+        #facebook:hover{
+            color: blue;
+            box-shadow: 0px 0px 15px blue,
+                        0px 0px 35px blue;
+            transition: box-shadow 0.3s;
+
+        }
+        #instagram:hover{
+            color: #FF3300;
+            box-shadow: 0px 0px 15px #FF3300,
+                        0px 0px 35px #FF3300;
+            transition: box-shadow 0.3s;
+        } 
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="file:///C:/Users/Admin/Desktop/Web%20final/index.html"><img class="logo" src="SubLogo.jpg" style="width: 150px;"></a>
+                <ul>
+                    <li><a class="inicio" href="index.html">Inicio</a></li>
+                    <li><a class="modulos" href="modulos.html">Módulos</a></li>
+                    <li><a class="noticias" href="noticias.html">Noticias</a></li>
+                    <li><a style="color: #007bff" class="eventos" href="eventos.html">Eventos</a></li>
+                    <li><a class="inscripcion" href="inscripciones.html">Inscripción</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <div class="cuerpo">
+
+        <div class="event-one">
+
+            <div class="events-one-video">
+                <video src="Video1.mp4" controls style="width: 400px; height: 300px; margin-left: 50px; margin-top: 20px;"></video>
+                <video src="Video2.mp4" controls style="width: 400px; height: 300px; margin-left: 50px; margin-top: 20px;"></video>
+                <video src="Video3.mp4" controls style="width: 400px; height: 300px; margin-left: 50px; margin-top: 20px;"></video>
+                <video src="Video4.mp4" controls style="width: 400px; height: 300px; margin-left: 50px; margin-top: 20px;"></video>
+                <video src="Video5.mp4" controls style="width: 400px; height: 300px; margin-left: 50px; margin-top: 20px;"></video>
+
+            </div>
+
+            <div class="events-one-info">
+                <h2>Actividad de los diagramas de flujo</h2>
+                <p style="font-size: 19px;">Este 24 de abril, los estudiantes de cuarto año, sección B de Informática, llevaron a cabo una actividad en la que discutieron el tema de los diagramas de flujo, una herramienta esencial en la programación y el diseño de sistemas. La actividad contó con la participación de seis grupos de estudiantes, quienes mostraron un gran nivel de preparación y profesionalismo al asistir vestidos formalmente. <br><br>
+                    Durante el evento, los estudiantes presentaron diferentes aspectos de los diagramas de flujo, compartiendo sus conocimientos y experiencias en torno a su aplicación en el desarrollo de software y sistemas informáticos. Los grupos demostraron su habilidad para trabajar en equipo y comunicar ideas de manera efectiva. <br><br>
+                    Al finalizar el evento, se reconoció el esfuerzo y dedicación de algunos estudiantes que destacaron por su excelente rendimiento académico en el módulo de Análisis y Desarrollo de Sistemas. Se les otorgaron medallas como símbolo de su logro y compromiso con su educación. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="redes-sociales">
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=100079913975583"><i style="color: blue" id="facebook" class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/politecnicomaxhenriquezurena/"><i style="color: #FF3300" id="instagram" class="fa-brands fa-instagram"></i></a>  
+        </div>
+        <div class="sub-redes">
+            <p>Únete a nuestras redes sociales | © 2024 - 2024 Instituto Politécnico Max Henríquez Ureña. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>

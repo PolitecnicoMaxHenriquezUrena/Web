@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Formulario Enviado</title>
+    <style>
+                body::-webkit-scrollbar{
+            width: 10px;
+        }
+        body::-webkit-scrollbar-thumb{
+            background-color: #ccc;
+            border-radius: 10px;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: -15px;
+            padding-left: 5%;
+            padding-right: 5%;
+            font-size: 20px;
+            position: fixed;
+            top: 0;
+        }
+        nav{
+            background-color: white;
+            width: 1229px;
+            top: 0;
+            left: 0px;
+            box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
+            z-index: 2;
+        }
+        ul li{
+            display: inline-block;
+            padding: 0px 20px;
+         }
+        a:hover{
+            text-decoration: none;
+            color: #007bff;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+            transition: color 0.3s;
+            font-family: sans-serif;
+            font-size: 18px;
+        }
+        .inicio::after{
+            content: '';
+            position: absolute;
+            right: 41.9%;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            bottom: 12px;
+            width: 0px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .inicio:hover::after{
+            width: 60px;
+        }
+        .noticias::after {
+            content: '';
+            position: absolute;
+            right: 26.4%;
+            transform: translateX(50%);
+            bottom: 12px;
+            width: 0;
+            height: 2px;
+            background-color: #007bff;
+            transition: width 0.3s ease-in-out;
+        }
+        .noticias:hover::after {
+            width: 80px;
+        }
+        .modulos:after{
+            content: '';
+            position: absolute;
+            right: 34.6%;
+            bottom: 12px;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            width: 0px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .modulos:hover::after{
+            width: 80px;
+        }
+        .eventos:after{
+            content: '';
+            position: absolute;
+            right: 18.4%;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            bottom: 12px;
+            width: 0px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .eventos:hover::after{
+            width: 80px;
+        }
+        .inscripcion:after{
+            content: '';
+            position: absolute;
+            right: 9.6%;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            bottom: 12px;
+            width: 100px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .inscripcion:hover::after{
+            width: 100px;
+        }
+        .redes-sociales{
+            background-color: none;
+            width: 1470px;
+            height: 50px;
+            position: absolute;
+            bottom: 30px;
+            left: -130px;
+            box-sizing: border-box;
+        }
+        .redes{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+        }
+        .sub-redes{
+            background-color: none;
+            position: absolute;
+            width: 800px;
+            left: 430px;
+            bottom: -10px;
+            color: grey;
+        }
+        i{
+            text-align: center;
+            font-size: 15x;
+            margin: 20px;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, .35);
+            transition: color 2s;
+        }
+        #facebook:hover{
+            color: blue;
+            box-shadow: 0px 0px 15px blue,
+                        0px 0px 35px blue;
+            transition: box-shadow 0.3s;
+
+        }
+        #instagram:hover{
+            color: #FF3300;
+            box-shadow: 0px 0px 15px #FF3300,
+                        0px 0px 35px #FF3300;
+            transition: box-shadow 0.3s;
+        }
+        icon{
+            position: absolute;
+            font-size: 100px;
+            top: 50px;
+            left: 400px;
+            color: rgb(81, 196, 81);
+        }
+        h1{
+            position: absolute;
+            top: 140px;
+            left: 180px;
+            color: rgb(81, 196, 81);
+        }
+        .ty{
+            position: absolute;
+            font-size: 20px;
+            top: 190px;
+            left: 50px;
+            color: rgba(0, 0, 0, 0.8);
+        }
+        .cuerpo{
+            background-color: none;
+            position: absolute;
+            width: 900px;
+            height: 300px;
+            top: 150px;
+            left: 230px;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="file:///C:/Users/Admin/Desktop/Web%20final/index.html"><img class="logo" src="SubLogo.jpg" style="width: 150px;"></a>
+                <ul>
+                    <li><a class="inicio" href="index.html">Inicio</a></li>
+
+                    <li><a class="modulos" href="modulos.html">Módulos</a></li>
+
+                    <li><a class="noticias" href="noticias.html">Noticias</a></li>
+
+
+                    <li><a class="eventos" href="eventos.html">Eventos</a></li>
+
+                    <li><a style="color: #007bff" class="inscripcion" href="inscripciones.html">Inscripción</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <div class="cuerpo">
+    <icon class="fa-regular fa-circle-check" id="correct"></icon>
+    <h1>¡Formulario enviado correctamente!</h1>
+    <p class="ty">¡Gracias por enviar tu formulario! Nos comunicaremos contigo a través de tu correo electrónico.</p>
+    </div>
+    <div class="redes-sociales">
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=100079913975583"><i style="color: blue" id="facebook" class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/politecnicomaxhenriquezurena/"><i style="color: #FF3300" id="instagram" class="fa-brands fa-instagram"></i></a>  
+        </div>
+        <div class="sub-redes">
+            <p>Únete a nuestras redes sociales | © 2024 - 2024 Instituto Politécnico Max Henríquez Ureña. Todos los derechos reservados.</p>
+        </div>
+    </div>
+
+</body>
+</html>

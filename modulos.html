@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Politécnico - Novedades</title>
+    <style>
+        body::-webkit-scrollbar{
+            width: 10px;
+        }
+        body::-webkit-scrollbar-thumb{
+            background-color: #ccc;
+            border-radius: 10px;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: -15px;
+            padding-left: 5%;
+            padding-right: 5%;
+            font-size: 20px;
+            position: fixed;
+            top: 0;
+        }
+        nav{
+            background-color: white;
+            width: 1229px;
+            top: 0;
+            left: 0px;
+            box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
+            z-index: 2;
+        }
+        ul li{
+            display: inline-block;
+            padding: 0px 20px;
+         }
+        a:hover{
+            text-decoration: none;
+            color: #007bff;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+            transition: color 0.3s;
+            font-family: sans-serif;
+            font-size: 18px;
+        }
+        .inicio::after{
+            content: '';
+            position: absolute;
+            right: 41.9%;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            bottom: 12px;
+            width: 0px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .inicio:hover::after{
+            width: 60px;
+        }
+        .noticias::after {
+            content: '';
+            position: absolute;
+            right: 26.4%;
+            transform: translateX(50%);
+            bottom: 12px;
+            width: 0;
+            height: 2px;
+            background-color: #007bff;
+            transition: width 0.3s ease-in-out;
+        }
+        .noticias:hover::after {
+            width: 80px;
+        }
+        .modulos:after{
+            content: '';
+            position: absolute;
+            right: 34.6%;
+            bottom: 12px;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            width: 80px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .modulos:hover::after{
+            width: 80px;
+        }
+        .eventos:after{
+            content: '';
+            position: absolute;
+            right: 18.4%;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            bottom: 12px;
+            width: 0px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .eventos:hover::after{
+            width: 80px;
+        }
+        .inscripcion:after{
+            content: '';
+            position: absolute;
+            right: 9.6%;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            bottom: 12px;
+            width: 0px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .inscripcion:hover::after{
+            width: 100px;
+        }
+        .cuerpo{
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+            position: absolute;
+            width: 1100px;
+            height: 4170px;
+            left: 130px;
+            top: 80px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .introduccion{
+            position: absolute;
+            background-color: none;
+            width: 1090px;
+            height: 550px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .cuerpo:after{
+            background-color: #000;
+            position: absolute;
+            content: '';
+            width: 1100px;
+            height: 1px;
+            left: 0px;
+            top: 580px
+        }
+        .scroll{
+            height: 4300px;
+        }
+        .informatica{
+            top: 600px;
+            position: absolute;
+            background-color: none;
+            width: 1090px;
+            height: 550px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .informatica:after{
+            position: absolute;
+            content: '';
+            background-color: #000;
+            height: 1px;
+            width: 1100px;
+            bottom: -27px;
+            left: -5px;
+        }
+        .contabilidad{
+            top: 1200px;
+            position: absolute;
+            background-color: none;
+            width: 1090px;
+            height: 550px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .contabilidad:after{
+            position: absolute;
+            content: '';
+            background-color: #000;
+            height: 1px;
+            width: 1100px;
+            bottom: -27px;
+            left: -5px;
+        }
+        .logistica{
+            top: 1800px;
+            position: absolute;
+            background-color: none;
+            width: 1090px;
+            height: 550px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .logistica:after{
+            position: absolute;
+            content: '';
+            background-color: #000;
+            height: 1px;
+            width: 1100px;
+            bottom: -27px;
+            left: -5px;
+        }
+        .electronica{
+            top: 2400px;
+            position: absolute;
+            background-color: none;
+            width: 1090px;
+            height: 550px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .electronica:after{
+            position: absolute;
+            content: '';
+            background-color: #000;
+            height: 1px;
+            width: 1100px;
+            bottom: -27px;
+            left: -5px;
+        }
+        .electricidad{
+            top: 3000px;
+            position: absolute;
+            background-color: none;
+            width: 1090px;
+            height: 550px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .electricidad:after{
+            position: absolute;
+            content: '';
+            background-color: #000;
+            height: 1px;
+            width: 1100px;
+            bottom: -27px;
+            left: -5px;
+        }
+        .refrigeracion{
+            top: 3600px;
+            position: absolute;
+            background-color: none;
+            width: 1090px;
+            height: 550px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        div::-webkit-scrollbar{
+            width: 7px;
+        }
+        div::-webkit-scrollbar-thumb{
+            background-color: #ccc;
+            border-radius: 10px;
+        }
+        .redes-sociales{
+            background-color: none;
+            width: 1470px;
+            height: 50px;
+            position: absolute;
+            top: 4270px;
+            left: -170px;
+            box-sizing: border-box;
+        }
+        .redes{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+        }
+        .sub-redes{
+            background-color: none;
+            position: absolute;
+            width: 800px;
+            left: 430px;
+            bottom: -10px;
+            color: grey;
+        }
+        i{
+            text-align: center;
+            font-size: 15x;
+            margin: 20px;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, .35);
+            transition: color 2s;
+        }
+        #facebook:hover{
+            color: blue;
+            box-shadow: 0px 0px 15px blue,
+                        0px 0px 35px blue;
+            transition: box-shadow 0.3s;
+
+        }
+        #instagram:hover{
+            color: #FF3300;
+            box-shadow: 0px 0px 15px #FF3300,
+                        0px 0px 35px #FF3300;
+            transition: box-shadow 0.3s;
+        } 
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="file:///C:/Users/Admin/Desktop/Web%20final/index.html"><img class="logo" src="SubLogo.jpg" style="width: 150px;"></a>
+                <ul>
+                    <li><a class="inicio" href="index.html">Inicio</a></li>
+                    <li><a style="color: #007bff" class="modulos" href="modulos.html">Módulos</a></li>
+                    <li><a class="noticias" href="noticias.html">Noticias</a></li>
+                    <li><a class="eventos" href="eventos.html">Eventos</a></li>
+                    <li><a class="inscripcion" href="inscripciones.html">Inscripción</a></li>
+                </ul>
+        </nav>
+    </header>
+    <div class="scroll"></div>
+
+    <div class="cuerpo">
+
+        <div class="introduccion">
+            <img src="int-img-uno.png" style="border: solid 1px black; width: 350px; height: 270px;">
+            <img src="int-img-dos.jpeg" style="position: absolute; border: solid 1px black; width: 350px; height: 230px; bottom: 5px; left: 5px;">
+            <div style="position: absolute; background-color: none; width: 710px; height: 540px; top: 5px; right: 5px; padding: 20px; box-sizing: border-box;">
+                <h2 style="text-align: center;">Los módulos impartidos en el centro.</h2>
+                <p style="font-size: 19px;">El Politécnico Max Henríquez Ureña, uno de los primeros establecimientos educativos en la localidad de Los Alcarrizos, ha jugado un papel esencial en el desarrollo académico y profesional de la comunidad. Desde sus inicios, el politécnico se centró en ofrecer una sólida base de educación general para sus estudiantes. Sin embargo, en el año 2001, se introdujeron varias materias técnicas, ampliando significativamente su alcance educativo. <br>
+                <br> Esta incorporación de módulos técnicos marcó el comienzo de una nueva etapa para el politécnico, que luego alcanzó un hito importante en 2004 con la introducción de la enseñanza en informática. Este avance representó un cambio notable en la dirección de la institución, reflejando su compromiso con la actualización constante y la inclusión de áreas de estudio modernas y relevantes. <br>
+                <br>Con el paso del tiempo, el Politécnico Max Henríquez Ureña ha ampliado y mejorado su oferta educativa, convirtiéndose en una institución destacada en la enseñanza técnica en la región. Su impacto positivo en la comunidad es claro, ya que ha brindado a los estudiantes las competencias y conocimientos necesarios para destacar en sus carreras profesionales y colaborar con el progreso de su entorno.</p>            
+            </div>
+        </div>
+
+        <div class="informatica">
+            <img src="informatica.png" style="border: solid 1px black; width: 350px; height: 270px; position: absolute; right: 5px;">
+            <div style="background-color: none; position: absolute; width: 350px; height: 250px; bottom: 5px; right: 5px; overflow: scroll;">
+                <h3 style="text-align: center;">Módulos impartidos</h3>
+                <ul style="font-size: 19px;">
+                    <li>Análisis y Diseño de Sistemas Informáticos.</li><br><br>
+                    <li>Diseño y Desarrollo de Base de Datos.</li><br><br>
+                    <li>Diseño Port. Web R.M.</li><br><br>
+                    <li>Ofimática.</li><br><br>
+                </ul>
+        </div>
+            <div style="position: absolute; background-color: none; width: 710px; height: 540px; top: 5px; left: 5px; padding: 20px; box-sizing: border-box;">
+                <h2 style="text-align: center;">Desarrollo y Administración de Aplicaciones Informáticas </h2>
+                <p style="font-size: 19px;">El curso de Desarrollo y Administración de Aplicaciones Informáticas se introdujo en el año 2004 como una respuesta a la creciente demanda de habilidades informáticas en el ámbito educativo y laboral. Desde su inicio, el curso ha sido fundamental para dotar a los estudiantes con las habilidades técnicas y conocimientos necesarios para desenvolverse con éxito en el mundo digital. <br>
+                <br>Durante las primeras etapas de su implementación, el curso se benefició de la utilización de los primeros equipos electrónicos, específicamente computadoras, lo que revolucionó la forma en que se impartía la enseñanza en el área de la ofimática. El acceso a estas herramientas tecnológicas brindó a los estudiantes la oportunidad de aprender de manera más eficiente y eficaz, permitiéndoles experimentar de primera mano las aplicaciones prácticas de la informática en diversas áreas. <br>
+                <br>A lo largo de los años, el curso ha evolucionado junto con los avances tecnológicos, incorporando nuevas herramientas y técnicas de enseñanza para mantenerse actualizado y relevante. Los estudiantes han podido desarrollar competencias en programación, diseño de software, bases de datos, y otras disciplinas esenciales para su éxito profesional en el campo de las aplicaciones informáticas. </p>
+            </div>
+        </div>
+
+        <div class="contabilidad">
+            <img src="contabilidad.png" style="border: solid 1px black; width: 350px; height: 270px; position: absolute;">
+            <div style="background-color: none; position: absolute; width: 350px; height: 250px; bottom: 5px; left: 5px; overflow: scroll;">
+                <h3 style="text-align: center;">Módulos impartidos</h3>
+                <ul style="font-size: 19px;">
+                    <li>Comunicación Empresarial.</li><br><br>
+                    <li>Gestión Administra de recursos humanos.</li><br><br>
+                    <li>Gestión Administrativa de Tesorería.</li><br><br>
+                    <li>Gestiones Administrativas de Compras y Vetas.</li><br><br>
+                    <li>Gestión de datos y Documentación.</li><br><br>
+                    <li>Ofimática.</li><br><br>
+                </ul>
+            </div>
+            <div style="position: absolute; background-color: none; width: 710px; height: 540px; top: 5px; right: 5px; padding: 20px; box-sizing: border-box;">
+                    <h2 style="text-align: center;">Gestión Administrativa Tributaria en la Actualidad</h2>
+                <p style="font-size: 19px;">Hoy en día, la contabilidad ha cambiado mucho gracias a la tecnología, que ha transformado cómo funcionan las oficinas contables. El uso de herramientas digitales y software especializado ha revolucionado las tareas contables, haciéndolas más eficientes, precisas y rápidas. <br>
+                <br>Ahora, los contadores pueden automatizar tareas repetitivas como la conciliación bancaria y el registro de transacciones, lo que les permite enfocarse en análisis más complejos y estratégicos. Además, el uso de sistemas contables en la nube facilita el acceso a información en tiempo real desde cualquier lugar, brindando más flexibilidad en el trabajo. <br>
+                <br> La tecnología también ha fomentado una mayor colaboración entre contadores y clientes, con plataformas seguras para compartir documentos y datos. En resumen, la tecnología ha transformado la contabilidad, haciéndola más productiva y permitiendo a los contadores brindar servicios más precisos y valiosos a sus clientes.</p>
+            </div>
+        </div>
+
+
+        <div class="logistica">
+            <img src="logistica.png" style="border: solid 1px black; width: 350px; height: 270px; right: 5px; position: absolute;">
+            <div style="background-color: none; position: absolute; width: 350px; height: 250px; bottom: 5px; right: 5px; overflow: scroll;">
+            <h3 style="text-align: center;">Módulos impartidos</h3> 
+                <ul style="font-size: 19px;">
+                    <li>Información y Atención al Cliente.</li><br><br>
+                    <li>Gestión de Aprovisionamiento.</li><br><br>
+                    <li>Logística en el Almacén.</li><br><br>
+                    <li>Impuesto de Consumo Vehículo de Motor.</li><br><br>
+                    <li>Ofimática.</li><br><br>
+                </ul>
+            </div>
+            <div style="position: absolute; background-color: none; width: 710px; height: 540px; top: 5px; left: 5px; padding: 20px; box-sizing: border-box;">
+                <h2 style="text-align: center;">Logística y Transporte</h2>
+            <p style="font-size: 19px;">En 2006, la escuela dio un paso importante al agregar la enseñanza de logística a su programa de estudios. Esta materia es esencial hoy en día porque se centra en planificar y gestionar el flujo de bienes y servicios desde su origen hasta su destino final. <br>
+            <br>La logística y la tecnología van de la mano, y gracias a los avances tecnológicos, los procesos logísticos han mejorado mucho en eficiencia y precisión. Ahora es posible tomar decisiones basadas en datos en tiempo real, lo que ayuda a que todo funcione mejor. <br>
+            <br>Los estudiantes que estudian logística desarrollan habilidades clave para manejar cadenas de suministro, operaciones y recursos de manera óptima. Esta combinación de logística y tecnología abre muchas oportunidades laborales y permite que los egresados contribuyan al crecimiento de diferentes sectores económicos.</p>
+            </div>
+        </div>    
+
+        <div class="electronica">
+            <img src="electronica.png" style="border: solid 1px black; width: 350px; height: 270px; position: absolute;">
+            <div style="background-color: none; position: absolute; width: 350px; height: 250px; bottom: 5px; left: 5px;">
+                <h3 style="text-align: center;">Módulos impartidos</h3>
+                    <ul style="font-size: 19px;">
+                        <li>Circuito Electrónico.</li><br><br>
+                        <li>Ensamblaje.</li><br><br>
+                        <li>Potencia y Control.</li><br><br>
+                        <li>Ofimática.</li><br><br>
+                    </ul>
+            </div>
+            <div style="position: absolute; background-color: none; width: 710px; height: 540px; top: 5px; right: 5px; padding: 20px; box-sizing: border-box;">
+            <h2 style="text-align: center;">Equipos Electrónicos</h2>
+            <p style="font-size: 19px;">En 2001, nuestra institución comenzó a ofrecer enseñanza de electrónica, marcando un hito en la diversificación de nuestros programas académicos. Esta disciplina está estrechamente relacionada con la tecnología, ya que brinda a los estudiantes una base sólida en el funcionamiento, diseño y reparación de diversos equipos electrónicos. <br>
+            <br>Los alumnos aprenden sobre circuitos, componentes eléctricos, y técnicas de diagnóstico y reparación, lo que les permite solucionar problemas en una amplia gama de dispositivos, desde electrodomésticos hasta equipos de comunicación y tecnología de la información. <br>
+            <br>Este enfoque en la electrónica también les da la oportunidad de trabajar en proyectos prácticos, donde aplican sus conocimientos para diseñar y construir sus propios dispositivos o mejorar los existentes. Como resultado, los estudiantes desarrollan habilidades valiosas que son muy demandadas en el mercado laboral moderno y pueden seguir carreras exitosas en diversas industrias tecnológicas.</p>
+            </div>
+        </div>
+
+        <div class="electricidad">
+            <img src="electricidad.png" style="border: solid 1px black; right: 5px; width: 350px; height: 270px; position: absolute;">
+            <div style="background-color: none; position: absolute; width: 350px; height: 250px; bottom: 5px; right: 5px; overflow: scroll;">
+            <h3 style="text-align: center;">Módulos impartods</h3>
+                <ul style="font-size: 19px;">
+                    <li>Montaje y Mantenimiento Eléctrico</li><br><br>
+                    <li>Redes Eléctricas.</li><br><br>
+                    <li>Redes Subterráneas.</li><br><br>
+                    <li>Redes Aéreas e Instalaciones Eléctricas en Edificaciones.</li>
+                    <li>Ofimática.</li><br><br>
+                </ul>
+            </div>
+            <div style="position: absolute; background-color: none; width: 710px; height: 540px; top: 5px; left: 5px; padding: 20px; box-sizing: border-box;">
+                <h2 style="text-align: center;">Instalaciones Eléctricas</h2>
+                <p style="font-size: 19px;">Desde que el estudio de la electricidad se introdujo en 2001, el Politécnico ha establecido esta materia como una parte fundamental de su formación tecnológica. Esta disciplina está muy relacionada con el avance tecnológico, ya que el uso de equipos electrónicos es cada vez más común en muchas áreas, desde la ingeniería hasta la vida diaria.<br>
+                <br>Los estudiantes aprenden sobre conceptos clave como circuitos, resistencias, y el manejo seguro de la electricidad, lo que les permite trabajar con confianza en proyectos de cableado y otras aplicaciones prácticas. Además, los tutoriales en vídeo y otros recursos digitales han facilitado el aprendizaje y la comprensión de conceptos complejos.<br>
+                <br>La electricidad ha pasado a ser un componente esencial del currículo en el Politécnico, no solo por su aplicación en diversas industrias, sino también por su importancia en el desarrollo de habilidades para resolver problemas y trabajar en equipo. A medida que los estudiantes se adentran en este campo, adquieren una base sólida que les prepara para carreras en ingeniería eléctrica, tecnología de la información y otras áreas relacionadas.</p>
+            </div>
+        </div>
+
+        <div class="refrigeracion">
+            <img src="refrigeracion.png" style="width: 350px; height: 270px; position: absolute;">
+            <div style="background-color: none; position: absolute; width: 350px; height: 250px; bottom: 5px; left: 5px;">
+            <h3 style="text-align: center;">Módulos impartodos</h3>
+                <ul style="font-size: 19px;">
+                    <li>Montaje y Mantenimiento de Refrigeración Comercial.</li><br><br>
+                    <li>Maquinas Equipos Instalaciones de Refrigeración y AA.</li><br><br>
+                    <li>Ofimática.</li><br><br>
+                </ul>
+            </div>
+            <div style="position: absolute; background-color: none; width: 710px; height: 540px; top: 5px; right: 5px; padding: 20px; box-sizing: border-box;">
+                <h2 style="text-align: center;">Refrigeración y Acondicionamiento de Aire</h2>
+                <p style="font-size: 19px;">En 2001, el Politécnico Max Henríquez Ureña incorporó a su oferta educativa la enseñanza de refrigeración, utilizando tecnología de última generación. Esta iniciativa representó un gran avance para la institución, ya que les dio a los estudiantes la oportunidad de aprender con equipos modernos y métodos innovadores. <br>
+                <br>Los alumnos comenzaron a trabajar con herramientas y tecnologías avanzadas desde el inicio de su formación, lo que les proporcionó una valiosa experiencia práctica. Esta enseñanza en refrigeración les abrió muchas puertas en el mundo laboral, especialmente en áreas como climatización, mantenimiento industrial y conservación de alimentos. <br>
+                <br>El conocimiento de la refrigeración es esencial para diversas industrias que dependen de mantener temperaturas controladas, como la manufactura y el transporte. Al aprender sobre estas tecnologías, los estudiantes ampliaron sus opciones de carrera y se prepararon para enfrentar desafíos en el campo de la refrigeración con soluciones más eficientes y sostenibles.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="redes-sociales">
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=100079913975583"><i style="color: blue" id="facebook" class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/politecnicomaxhenriquezurena/"><i style="color: #FF3300" id="instagram" class="fa-brands fa-instagram"></i></a>  
+        </div>
+        <div class="sub-redes">
+            <p>Únete a nuestras redes sociales | © 2024 - 2024 Instituto Politécnico Max Henríquez Ureña. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>

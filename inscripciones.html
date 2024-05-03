@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Politécnico - Inscripción</title>
+    <style>
+        body::-webkit-scrollbar{
+            width: 10px;
+        }
+        body::-webkit-scrollbar-thumb{
+            background-color: #ccc;
+            border-radius: 10px;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: -15px;
+            padding-left: 5%;
+            padding-right: 5%;
+            font-size: 20px;
+            position: fixed;
+            top: 0;
+        }
+        nav{
+            background-color: white;
+            width: 1229px;
+            top: 0;
+            left: 0px;
+            box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
+            z-index: 2;
+        }
+        ul li{
+            display: inline-block;
+            padding: 0px 20px;
+         }
+        a:hover{
+            text-decoration: none;
+            color: #007bff;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+            transition: color 0.3s;
+            font-family: sans-serif;
+            font-size: 18px;
+        }
+        .inicio::after{
+            content: '';
+            position: absolute;
+            right: 41.9%;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            bottom: 12px;
+            width: 0px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .inicio:hover::after{
+            width: 60px;
+        }
+        .noticias::after {
+            content: '';
+            position: absolute;
+            right: 26.4%;
+            transform: translateX(50%);
+            bottom: 12px;
+            width: 0;
+            height: 2px;
+            background-color: #007bff;
+            transition: width 0.3s ease-in-out;
+        }
+        .noticias:hover::after {
+            width: 80px;
+        }
+        .modulos:after{
+            content: '';
+            position: absolute;
+            right: 34.6%;
+            bottom: 12px;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            width: 0px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .modulos:hover::after{
+            width: 80px;
+        }
+        .eventos:after{
+            content: '';
+            position: absolute;
+            right: 18.4%;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            bottom: 12px;
+            width: 0px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .eventos:hover::after{
+            width: 80px;
+        }
+        .inscripcion:after{
+            content: '';
+            position: absolute;
+            right: 9.6%;
+            transform: translateX(50%);
+            transition: width 0.3s ease-in-out;
+            bottom: 12px;
+            width: 100px;
+            height: 2px;
+            background-color: #007bff;
+        }
+        .inscripcion:hover::after{
+            width: 100px;
+        }
+        .ingresado{
+            background-color: white;
+            position: absolute;
+            box-sizing: border-box;
+            width: 650px;
+            height: 450px;
+            top: 130px;
+            left: 260px;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        input{
+            background-color: rgb(247, 247, 247);
+        }
+        .infomadre{
+            background-color: white;
+            position: absolute;
+            box-sizing: border-box;
+            width: 650px;
+            height: 350px;
+            top: 700px;
+            left: 260px;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        .infopadre{
+            background-color: white;
+            position: absolute;
+            box-sizing: border-box;
+            width: 650px;
+            height: 450px;
+            top: 1170px;
+            left: 260px;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        .cuerpo{
+            background-color: none;
+            position: absolute;
+            top: 0px;
+            right: 80px;
+            width: 1000px;
+            height: 1680px;
+            border-radius: 10px;
+        }
+        .enviar{
+            position: absolute;
+            border: solid 1px black;
+            border-radius: 50px;
+            width: 120px; 
+            height: 30px; 
+            left: 270px; 
+            bottom: 50px;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+        .enviar:hover{
+            background-color: #d5d5d5;
+        }
+        .redes-sociales{
+            background-color: none;
+            width: 1470px;
+            height: 50px;
+            position: fixed;
+            bottom: 20px;
+            left: -135px;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+        .redes{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+        }
+        .sub-redes{
+            background-color: none;
+            position: absolute;
+            width: 800px;
+            left: 460px;
+            bottom: -1030px;
+            color: grey;
+            text-align: center;
+        }
+        i{
+            text-align: center;
+            font-size: 15x;
+            margin: 20px;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, .35);
+            transition: color 2s;
+
+        }
+        #facebook:hover{
+            color: blue;
+            box-shadow: 0px 0px 15px blue,
+                        0px 0px 35px blue;
+            transition: box-shadow 0.3s;
+
+        }
+        #instagram:hover{
+            color: #FF3300;
+            box-shadow: 0px 0px 15px #FF3300,
+                        0px 0px 35px #FF3300;
+            transition: box-shadow 0.3s;
+        }
+        .menu{
+            background-color: white;
+            position: fixed;
+            width: 300px;
+            height: 560px;
+            top: 70px;
+            left: 10px;
+            box-shadow: 0px 0px 10px black;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        iframe{
+            position: absolute;
+            width: 290px;
+            height: 290px;
+            top: 5px;
+            left: 5px;
+        }
+        .info{
+            background-color: none;
+            position: absolute;
+            width: 290px;
+            height: 255px;
+            left: 5px;
+            bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="file:///C:/Users/Admin/Desktop/Web%20final/index.html"><img class="logo" src="SubLogo.jpg" style="width: 150px;"></a>
+                <ul>
+                    <li><a class="inicio" href="index.html">Inicio</a></li>
+
+                    <li><a class="modulos" href="modulos.html">Módulos</a></li>
+
+                    <li><a class="noticias" href="noticias.html">Noticias</a></li>
+
+
+                    <li><a class="eventos" href="eventos.html">Eventos</a></li>
+
+                    <li><a style="color: #007bff" class="inscripcion" href="inscripciones.html">Inscripción</a></li>
+                </ul>
+        </nav>
+    </header>
+    <div class="cuerpo">
+    <div class="ingresado">
+        <h1 style="position: absolute; top: 0; left: 240px;">Ingresado</h1>
+        <br><br><br>
+    <form action="finform.html">
+        <label for="name" style="font-size: 20px">Nombre</label>
+        <input type="text" placeholder="Nombre" style="height: 30px; border-radius: 10px; border: solid 1px black; margin-left: 4px; margin-right: 60px;" required>
+
+        <label for="edad" style="font-size: 20px">Edad</label>
+        <input type="number" placeholder="Edad" style="height: 30px; border-radius: 10px; border: solid 1px black;" required><br><br>
+
+        <label for="lastname" style="font-size: 20px">Apellido</label>
+        <input type="text" placeholder="Apellido" style="height: 30px; border-radius: 10px; border: solid 1px black; margin-right: 51px;" required>
+
+        <label for="grado" style="font-size: 20px">Grado</label>
+        <input type="text" placeholder="Grado" style="height: 30px; border-radius: 10px; border: solid 1px black;" required><br><br><br>
+
+        <h2>Elija tres modulos a los cuales desea ingresar</h2><br>
+
+        <label for="name" style="font-size: 20px;">Informática</label>
+        <input type="checkbox" class="myCheckbox" style="margin-right: 100px;">
+    
+        <label for="name" style="font-size: 20px;">Contabilidad</label>
+        <input type="checkbox" class="myCheckbox" style="margin-right: 100px;">
+    
+        <label for="name" style="font-size: 20px;">Logística</label>
+        <input type="checkbox" class="myCheckbox"><br><br><br>
+    
+        <label for="name" style="font-size: 20px;">Electrónica</label>
+        <input type="checkbox" class="myCheckbox" style="margin-right: 107px; margin-left: 6px;">
+    
+        <label for="name" style="font-size: 20px;">Electricidad</label>
+        <input type="checkbox" class="myCheckbox" style="margin-right: 64px;">
+    
+        <label for="name" style="font-size: 20px;">Refrigeración</label>
+        <input type="checkbox" class="myCheckbox">
+        
+        <a href="modulos.html"><p style="font-size: small; position: absolute; bottom: 0px; left: 40px; text-decoration: none; color: blue;">Más información sobre los módulos aquí.</p></a>
+
+    </div>
+
+    <div class="infomadre">
+
+            <h1 style="position: absolute; top: 0px; left: 150px;">Información de la madre</h1><br><br><br><br>
+
+        <label for="name" style="font-size: 20px">Nombre</label>
+        <input type="text" placeholder="Nombre" style="height: 30px; border-radius: 10px; border: solid 1px black; margin-left: 4px; margin-right: 45px;" required>
+
+        <label for="text" style="font-size: 20px">Cédula</label>
+        <input type="number" placeholder="Cédula" style="height: 30px; border-radius: 10px; border: solid 1px black;" required><br><br><br>
+
+        <label for="lastname" style="font-size: 20px">Apellido</label>
+        <input type="text" placeholder="Apellido" style="height: 30px; border-radius: 10px; border: solid 1px black; margin-right: 53px;" required>
+
+        <label for="grado" style="font-size: 20px">Email</label>
+        <input type="Email" placeholder="Email" style="height: 30px; border-radius: 10px; border: solid 1px black;" required><br><br><br>
+
+        <label for="name" style="font-size: 20px; margin-left: -9px;">Dirección</label>
+        <input type="text" placeholder="Dirección" style="height: 30px; border-radius: 10px; border: solid 1px black; margin-left: 0px; margin-right: 14px;" required>
+
+        <label for="text" style="font-size: 20px">Ocupación</label>
+        <input type="text" placeholder="Ocupación" style="height: 30px; border-radius: 10px; border: solid 1px black;" required><br><br><br>
+
+    </div>
+
+    <div class="infopadre">
+
+            <h1 style="position: absolute; top: 0px; left: 150px;">Información del padre</h1><br><br><br><br>
+
+            <label for="name" style="font-size: 20px">Nombre</label>
+            <input type="text" placeholder="Nombre" style="height: 30px; border-radius: 10px; border: solid 1px black; margin-left: 4px; margin-right: 45px;" required>
+    
+            <label for="text" style="font-size: 20px">Cédula</label>
+            <input type="number" placeholder="Cédula" style="height: 30px; border-radius: 10px; border: solid 1px black;" required><br><br><br>
+    
+            <label for="lastname" style="font-size: 20px">Apellido</label>
+            <input type="text" placeholder="Apellido" style="height: 30px; border-radius: 10px; border: solid 1px black; margin-right: 53px;" required>
+    
+            <label for="grado" style="font-size: 20px">Email</label>
+            <input type="Email" placeholder="Email" style="height: 30px; border-radius: 10px; border: solid 1px black;" required><br><br><br>
+    
+            <label for="name" style="font-size: 20px; margin-left: -9px;">Dirección</label>
+            <input type="text" placeholder="Dirección" style="height: 30px; border-radius: 10px; border: solid 1px black; margin-left: 0px; margin-right: 14px;" required>
+    
+            <label for="text" style="font-size: 20px">Ocupación</label>
+            <input type="text" placeholder="Ocupación" style="height: 30px; border-radius: 10px; border: solid 1px black;" required><br><br><br>
+
+            <a href="finform.html">
+                <input type="submit" value="Enviar Formulario" class="enviar">
+            </a>
+
+        </form>
+    </div>
+    </div>
+    <div class="redes-sociales">
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=100079913975583"><i style="color: blue; animation: subir;" id="facebook" class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/politecnicomaxhenriquezurena/"><i style="color: #FF3300; animation: subir;" id="instagram" class="fa-brands fa-instagram"></i></a>  
+        </div>
+    </div>
+    <div class="menu">
+        <div class="maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d945.7705112405639!2d-70.0525601!3d18.5251942!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaff4d4e3564bd5%3A0xeb91b90a009358f6!2sInstituto%20Polit%C3%A9cnico%20Max%20Henr%C3%ADquez%20Ure%C3%B1a!5e0!3m2!1ses-419!2sdo!4v1713625473876!5m2!1ses-419!2sdo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="info">
+            <h3 style="text-align: center;">Información</h3>
+            <p style="margin-left: 10px;"><strong>Teléfono:</strong> (809) 473-0601</p>
+            <p style="margin-left: 10px;"><strong>Ubicación:</strong> Nos localizamos en los Alcarrizos, Barrio la Unión, Calle Hato Nuevo.</p>
+            <h3 style="text-align: center;">Redes Sociales</h3>
+        </div>
+    </div>
+    <div class="sub-redes">
+        <p> © 2024 - 2024 Instituto Politécnico Max Henríquez Ureña. Todos los derechos reservados.</p>
+    </div>
+    <script>
+        const checkboxes = document.querySelectorAll('.myCheckbox');
+        let selectedCheckboxes = 0;
+
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', (event) => {
+                if (event.target.checked) {
+                    selectedCheckboxes++;
+                    if (selectedCheckboxes > 3) {
+                        event.target.checked = false;
+                        selectedCheckboxes--;
+                        alert('Solo se pueden seleccionar 3 casillas.');
+                    }
+                } else {
+                    selectedCheckboxes--;
+                }
+            });
+        });
+    </script>
+    
+
+</body>
+</html>
